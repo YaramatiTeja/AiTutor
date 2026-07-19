@@ -1,0 +1,62 @@
+/* Image Doubt Solver specific styles */
+.dropzone {
+  border: 2px dashed rgba(47, 111, 78, 0.25);
+  border-radius: 20px;
+  background: rgba(47, 111, 78, 0.02);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  position: relative;
+}
+
+.dropzone.dragover {
+  background: rgba(47, 111, 78, 0.08);
+  border-color: var(--accent);
+  transform: scale(0.99);
+}
+
+.dropzone-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.preview-container {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img-preview {
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(16, 32, 24, 0.12);
+  border: 1px solid rgba(19, 33, 26, 0.08);
+}
+
+.remove-preview-btn {
+  border-radius: 999px;
+  padding: 0.45rem 1.25rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+.dropzone.has-preview {
+  border: 2px solid rgba(47, 111, 78, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1.5rem;
+}
+
+.upload-label {
+  cursor: pointer;
+}

@@ -1,0 +1,74 @@
+/* Weak Topics custom styles */
+
+.weak-topics-hero {
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+}
+
+.weak-topics-copy {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.empty-state-card {
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+}
+
+.empty-state-icon {
+  font-size: 3.5rem;
+  display: block;
+}
+
+.score-card,
+.stats-card,
+.topic-section-card {
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.score-card:hover,
+.stats-card:hover,
+.topic-section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.score-icon {
+  font-size: 2.2rem;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.topic-item {
+  transition: transform 0.25s ease, background-color 0.2s ease;
+}
+
+.topic-item:hover {
+  background-color: var(--panel-soft) !important;
+  transform: translateX(4px);
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

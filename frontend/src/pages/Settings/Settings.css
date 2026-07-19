@@ -1,0 +1,208 @@
+.settings-container {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Manrope', sans-serif;
+}
+
+.settings-hero {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(16, 32, 24, 0.15);
+}
+
+.settings-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.settings-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.settings-card {
+  background: var(--panel);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.setting-label-block {
+  flex: 1;
+  min-width: 250px;
+}
+
+.setting-name {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.setting-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.setting-control {
+  min-width: 200px;
+}
+
+/* Form selectors */
+.setting-select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: var(--panel);
+  color: var(--text);
+  font-weight: 600;
+  outline: none;
+  transition: border-color 0.2s;
+  cursor: pointer;
+}
+
+.setting-select:focus {
+  border-color: var(--accent);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-group {
+  display: flex;
+  background: var(--panel-soft);
+  padding: 0.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.theme-toggle-btn.active {
+  background: var(--panel);
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Danger actions */
+.danger-zone {
+  border: 1px dashed #e74c3c;
+  background: rgba(231, 76, 60, 0.02);
+}
+
+.danger-title {
+  color: #e74c3c;
+}
+
+.btn-danger-action {
+  background: #e74c3c;
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-danger-action:hover {
+  background: #c0392b;
+}
+
+/* Success Save Notification Banner */
+.save-alert {
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  border: 1px solid rgba(46, 204, 113, 0.25);
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: fadeIn 0.3s;
+}
+
+/* Global Dark Theme Overrides */
+body.dark-theme {
+  --bg: #121824;
+  --panel: #1e293b;
+  --panel-soft: #0f172a;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #34d399;
+  --accent-strong: #059669;
+  --warning: #fb923c;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  
+  background:
+    radial-gradient(circle at top left, rgba(52, 211, 153, 0.1), transparent 30%),
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.1), transparent 25%),
+    #0f172a;
+}
+
+body.dark-theme .settings-hero {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+body.dark-theme .settings-card {
+  border-color: rgba(255,255,255,0.05);
+}
+
+body.dark-theme .setting-row {
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+body.dark-theme .setting-select {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-theme .theme-toggle-group {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .theme-toggle-btn.active {
+  background: #334155;
+  box-shadow: none;
+}
