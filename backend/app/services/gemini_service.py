@@ -57,9 +57,6 @@ def initialize_gemini(api_key: str | None = None, model: str | None = None) -> C
         key = _resolve_api_key(api_key)
         resolved_model = (model or os.getenv("GEMINI_MODEL") or DEFAULT_MODEL).strip()
 
-        print("Model from env:", os.getenv("GEMINI_MODEL"))
-        print("Resolved model:", resolved_model)
-
         try:
             _client = genai.Client(api_key=key)
             _model_name = resolved_model
